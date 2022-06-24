@@ -1,0 +1,14 @@
+.header-wrapper {
+    align-self: center;
+}
+@media (max-width: 1069px) {
+    .header-wrapper {
+        display: none;
+    }
+    .header-wrapper-active {
+        order: -1;
+        display: flex;
+        flex-direction: column;
+        margin: 22px auto 89px auto;
+    }
+}

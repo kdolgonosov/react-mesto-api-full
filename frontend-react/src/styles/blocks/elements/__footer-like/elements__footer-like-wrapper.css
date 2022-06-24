@@ -1,0 +1,5 @@
+.elements__footer-like-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 21px;
+}

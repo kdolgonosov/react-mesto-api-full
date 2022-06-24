@@ -1,0 +1,39 @@
+.auth__submit-btn {
+    margin-top: 186px;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    width: 358px;
+    height: 50px;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 400;
+    transition: opacity 0.2s ease 0.1s;
+}
+.auth__submit-btn_disabled {
+    cursor: default;
+    background-color: transparent;
+    color: #bcbcc4;
+    border: 1px solid #bcbcc4;
+}
+
+.auth__submit-btn:hover {
+    opacity: 0.6;
+}
+
+.auth__submit-btn_disabled:hover {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .auth__submit-btn {
+        width: 238px;
+        height: 46px;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+}

@@ -1,0 +1,11 @@
+.profile__info {
+  color: white;
+  align-self: center;
+  margin-left: 30px;
+}
+@media (max-width: 1069px) {
+  .profile__info {
+    margin-left: 0;
+    margin-top: 26px;
+  }
+}

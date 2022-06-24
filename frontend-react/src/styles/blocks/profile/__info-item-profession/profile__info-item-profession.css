@@ -1,0 +1,22 @@
+.profile__info-item-profession {
+  margin: 8px 0 0 0;
+  max-width: 290px;
+  font-size: 18px;
+  line-height: 21.78px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 1069px) {
+  .profile__info-item-profession {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .profile__info-item-profession {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 16.94px;
+  }
+}

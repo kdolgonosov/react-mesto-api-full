@@ -1,0 +1,21 @@
+.elements__footer-like {
+  padding: 0;
+  margin-bottom: 3px;
+  border: 0;
+  appearance: none;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url(../../../images/like_disabled.svg);
+  width: 22px;
+  height: 19px;
+  align-self: center;
+  transition: opacity 0.2s ease 0.1s;
+}
+
+.elements__footer-like:hover {
+  opacity: 0.5;
+}
+
+.elements__footer-like-active {  
+  background-image: url(../../../images/like_active.svg);
+}

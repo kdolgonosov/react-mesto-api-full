@@ -1,0 +1,25 @@
+.header__menu {
+    display: none;
+    align-self: center;
+    margin-right: 30px;
+    width: 24px;
+    height: 21px;
+    background-image: url(../../../images/menu.svg);
+    transition: opacity 0.2s ease 0.1s;
+}
+.header__menu:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 1069px) {
+    .header__menu {
+        display: flex;
+    }
+}
+.header__menu-active {
+    align-self: flex-end;
+    margin-top: -22.75px;
+    background-image: url(../../../images/menu-close-icon.svg);
+    width: 20px;
+    height: 20px;
+}

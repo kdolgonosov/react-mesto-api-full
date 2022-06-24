@@ -1,0 +1,18 @@
+.header__btn {
+    text-decoration: none;
+    color: #a9a9a9;
+    font-size: 18px;
+    line-height: 22px;
+    align-self: center;
+    transition: opacity 0.2s ease 0.1s;
+}
+.header__btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media (max-width: 1069px) {
+    .header__btn {
+        margin-right: 30px;
+    }
+}
