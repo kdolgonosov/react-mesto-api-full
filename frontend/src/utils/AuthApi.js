@@ -53,6 +53,7 @@ class AuthApi {
 const authApi = new AuthApi({
     baseUrl: 'https://api.kdolgonosov.mesto.nomoreparties.sbs',
     headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json',
     },
 });

@@ -31,7 +31,7 @@ function App() {
     useEffect(() => {
         authApi.verifyToken().then((res) => {
             setLoggedIn(true);
-            setCurrentEmail(res.data.email);
+            setCurrentEmail(res.email);
             history.push('/');
         });
     }, []);
@@ -45,14 +45,14 @@ function App() {
                         about: profileInfo.about,
                         avatar: profileInfo.avatar,
                     });
-                    setCards(cards);
+                    setCards(cards.data);
                 })
                 .catch((err) => console.log('Ошибка', err));
         }
     }, [loggedIn]);
 
     const handleCardLike = (card) => {
-        const isLiked = card.likes.some((i) => i._id === currentUser._id);
+        const isLiked = card.likes.some((i) => i === currentUser._id);
         api.changeLikeCardStatus(card._id, isLiked).then((newCard) => {
             setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
         });
@@ -135,9 +135,9 @@ function App() {
     };
     return (
         <CurrentUserContext.Provider value={currentUser}>
-            <div className="page">
+            <div className='page'>
                 <Switch>
-                    <ProtectedRoute exact path="/" loggedIn={loggedIn}>
+                    <ProtectedRoute exact path='/' loggedIn={loggedIn}>
                         <Header
                             headerClassname={mobileMenuActive ? 'header header-active' : 'header'}
                             headerLogoClassname={
@@ -162,7 +162,7 @@ function App() {
                                 >
                                     {currentEmail}
                                 </span>
-                                <a className="header__btn" onClick={onSignOut}>
+                                <a className='header__btn' onClick={onSignOut}>
                                     Выйти
                                 </a>
                             </div>
@@ -172,7 +172,7 @@ function App() {
                                         ? 'header__menu header__menu-active'
                                         : 'header__menu'
                                 }
-                                href="#"
+                                href='#'
                                 onClick={toggleMobileMenu}
                             ></a>
                         </Header>
@@ -208,7 +208,7 @@ function App() {
                             onClose={closeAllPopups}
                             onUpdateAvatar={handleUpdateAvatar}
                         />
-                        <PopupWithForm name="type_confirm" title="Вы уверены?" btnTitle="Да" />
+                        <PopupWithForm name='type_confirm' title='Вы уверены?' btnTitle='Да' />
 
                         <ImagePopup
                             card={selectedCard}
@@ -217,11 +217,11 @@ function App() {
                         />
                     </ProtectedRoute>
 
-                    <Route path="/sign-up">
+                    <Route path='/sign-up'>
                         <Register handleRegister={handleRegister} />
                     </Route>
 
-                    <Route path="/sign-in">
+                    <Route path='/sign-in'>
                         <Login handleLogin={handleLogin} />
                     </Route>
                 </Switch>

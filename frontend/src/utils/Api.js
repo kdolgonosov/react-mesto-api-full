@@ -1,7 +1,14 @@
 class Api {
     constructor({ baseUrl, headers }) {
         this._baseUrl = baseUrl;
-        this._headers = headers;
+        // this._headers = headers;
+    }
+
+    get _headers() {
+        return {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        };
     }
 
     _getResponseData(res) {
@@ -78,11 +85,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-37',
-    headers: {
-        authorization: 'aeaae200-dc8f-4573-a8c3-3a22f7a3c55d',
-        'Content-Type': 'application/json',
-    },
+    baseUrl: 'https://api.kdolgonosov.mesto.nomoreparties.sbs',
 });
 
 export default api;
