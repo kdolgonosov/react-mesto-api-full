@@ -1,19 +1,27 @@
-# Проектная работа №15
+# Проект "Место"
+## Ссылка на проект: https://kdolgonosov.github.io/mesto/
 
-## "React Mesto Api Full"
-- IP-адрес: [51.250.106.228](http://51.250.106.228)
-- URL: [kdolgonosov.mesto.nomoreparties.sbs](https://kdolgonosov.mesto.nomoreparties.sbs)
-- URL сервера: [api.kdolgonosov.mesto.nomoreparties.sbs](https://api.kdolgonosov.mesto.nomoreparties.sbs)
+Fullstack приложение, пользователь может зарегистрироваться, изменять данные своего профиля, добавлять, удалять и лайкать карточки.
 
-Проект представляет собой fullstack приложение, с возможностью регистрации, авторизации, редактирования контента страницы.
+### Стек: 
+- HTML
+- CSS
+- JavaScript
+- MongoDB
+- Express
+- React.js
+- Node.js
 
-### Задействованные технологии:
+### Функциональность:
+- jwt-аутенфикация
+- взаимодействие с собственным API
+- редактирование контента страницы
+- адаптивная вёрстка
 
--   Javascript
--   Node.js
--   Express.js
--   MongoDB
--   React
--   React Hooks
--   React Context
--   React Router
+### Запуск проекта:
+## Фронтенд:
+`npm run start` — запускает проект с hot-reload   
+`npm run build` — сборка проекта
+## Бэкенд:
+`npm run dev` — запускает проект с hot-reload   
+`npm run start` — запускает проект
